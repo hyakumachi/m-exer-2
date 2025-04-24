@@ -23,8 +23,9 @@ with open('class_indices.json', 'r') as f:
     fruit_classes = json.load(f)
 
 def get_recipes(fruit_name):
-    api_key = "198ce7a9d14c498ca8f519efcb536cd1" #SPOONACULAR API
+    api_key = "c9becf792f5648968445e5f885b12401" #SPOONACULAR API
     #ADDU ACC API KEY: 5fa8872fa7734a2cb4607720dff15622
+    #VEVOFIERY API KEY: 198ce7a9d14c498ca8f519efcb536cd1
     url = "https://api.spoonacular.com/recipes/complexSearch" 
     params = {"query": fruit_name, "apiKey": api_key, "number": 5}
 
@@ -39,8 +40,9 @@ def get_recipes(fruit_name):
     return ["Error fetching recipes."]
 
 def get_nutrition(fruit_name):
-    api_key = "yKjMzroQauMJKq2XO60IcK9DbUbxpqvPUmGaGBNR" #USDA API
+    api_key = "5bi92cuSw7k4AHyLjoOGvt0W7ha3UfZP4nu8bgnW" #USDA API
     #ADDU ACC API KEY: yKjMzroQauMJKq2XO60IcK9DbUbxpqvPUmGaGBNR
+    #VEVOFIERY API KEY: 5bi92cuSw7k4AHyLjoOGvt0W7ha3UfZP4nu8bgnW
     url = "https://api.nal.usda.gov/fdc/v1/foods/search"
     params = {"query": fruit_name, "api_key": api_key, "pageSize": 1}
     
